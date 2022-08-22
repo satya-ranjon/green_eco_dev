@@ -1,0 +1,66 @@
+.app_about {
+  width: 80%;
+  margin: 0 auto;
+  .conten_container {
+    .about__img {
+      img {
+        width: 100%;
+      }
+    }
+    .about__info {
+      h3 {
+        color: var(--theme_text);
+        text-align: center;
+        padding: 2vh 0vh;
+      }
+      .about__title_section {
+        text-align: center;
+        font-size: 22px;
+        font-family: var(--font-base3);
+        font-weight: 600;
+        padding: 1vh 0vh;
+      }
+    }
+    .about__discription {
+      font-size: 12px;
+    }
+    .about_img_box {
+      display: none;
+    }
+    @media screen and (min-width: 900px) {
+      display: flex;
+      .about__discription {
+        font-size: 15px;
+      }
+
+      .about__info {
+        width: fit-content;
+        padding: 0 5vh;
+      }
+      .about__img {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .about_img_one {
+          padding: 1vh;
+          width: 50%;
+        }
+        .about_img_box {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .about_img_two {
+            width: 100%;
+            padding: 1vh 1vh 0vh 0vh;
+            height: 100%;
+          }
+          .about_img_three {
+            width: 100%;
+            height: 100%;
+            padding: 1vh 1vh 1vh 0vh;
+          }
+        }
+      }
+    }
+  }
+}

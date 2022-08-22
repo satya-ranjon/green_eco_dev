@@ -1,0 +1,56 @@
+.app__header {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 15vh;
+  justify-content: center;
+  flex-direction: column;
+  @media screen and (min-width: 900px) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+.hader_info {
+  // text-align: center;
+  width: 100%;
+  @media screen and (min-width: 360px) {
+    padding-right: 2vh;
+  }
+  .hader_about {
+    font-family: var(--font-base3);
+    font-size: 13px;
+    color: #292929;
+    font-weight: 400;
+    padding-top: 1vh;
+    margin-bottom: 6vh;
+  }
+  .header_titel {
+    font-size: 18px;
+    font-weight: bold;
+    span {
+      color: var(--theme_text);
+      font-size: 40px;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    padding: 8vh 0vh;
+    .hader_about {
+      max-width: 400px;
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    .header_titel {
+      font-size: 30px;
+      span {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+.header_carousel {
+  width: 100%;
+  @media screen and (min-width: 900px) {
+    // width: 600px;
+  }
+}
