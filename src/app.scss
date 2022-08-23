@@ -34,13 +34,15 @@
     height: 3px;
     background-color: var(--theme_text);
   }
-  @media screen and (max-width: 450px) {
+
+  @media screen and (max-width: 820px) {
+    font-size: 30px;
     span {
       width: 250px;
     }
   }
-  @media screen and (max-width: 600px) {
-    font-size: 30px;
+  @media screen and (max-width: 450px) {
+    font-size: 20px;
     span {
       width: 250px;
     }
@@ -94,7 +96,7 @@
         height: 30px;
       }
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 450px) {
       margin: auto 1vh;
     }
   }
