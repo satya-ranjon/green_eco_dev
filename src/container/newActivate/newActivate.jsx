@@ -4,7 +4,7 @@ import AppWrap from "../../wrapper/AppWrap";
 import "./newActivate.scss";
 
 const NewActivate = () => {
-  const myAr = [1, 2, 3, , 4, 5, 6, 7, 8, 9, 12, 3, 4, 2];
+  const myAr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 3, 4, 2];
   return (
     <div className="app_newActivate">
       <div className="app__title">
@@ -33,7 +33,7 @@ const NewActivate = () => {
             <div className="pro_obj_discription">
               <ol>
                 {myAr.map((item) => (
-                  <li>
+                  <li key={item + Math.random() * 10}>
                     Ripe jackfruit which plays a role in biodiversity
                     conservation trees are used as food by various birds. which
                     plays a role in biodiversity conservation

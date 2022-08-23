@@ -17,7 +17,13 @@ const NavBar = () => {
   return (
     <div className="app__navbar">
       <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
+        <a
+          href="https://greenecho.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={images.logo} alt="logo" />
+        </a>
       </div>
       <ul className="app__navbar-links">
         {pages.map((item) => (

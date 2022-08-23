@@ -1,6 +1,9 @@
 .app_newActivate {
   width: 80%;
   margin: 0% auto;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .app_new_activate_contant {
@@ -85,6 +88,17 @@
           span {
             width: 20px;
             height: 20px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 330px) {
+    .activate_discription {
+      .project_objectives {
+        .project_obj_box {
+          h2 {
+            font-size: 20px;
           }
         }
       }

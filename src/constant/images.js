@@ -8,6 +8,8 @@ import fiveCarousel from "../assets/corosol/5.jpg";
 import sixCarousel from "../assets/corosol/6.jpg";
 import sevenCarousel from "../assets/corosol/7.jpg";
 import eightCarousel from "../assets/corosol/8.jpg";
+import email from "../assets/email.png";
+import mobile from "../assets/mobile.png";
 
 export default {
   logo,
@@ -20,4 +22,6 @@ export default {
   sixCarousel,
   sevenCarousel,
   eightCarousel,
+  email,
+  mobile,
 };

@@ -13,6 +13,9 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   z-index: 2;
+  @media screen and (max-width: 600px) {
+    padding: 0.5rem 1rem;
+  }
 }
 .app__navbar-logo {
   display: flex;

@@ -1,6 +1,10 @@
 .app_about {
   width: 80%;
   margin: 0 auto;
+  @media screen and (max-width: 600px) {
+    padding-top: 0vh;
+    width: 100%;
+  }
   .conten_container {
     .about__img {
       img {

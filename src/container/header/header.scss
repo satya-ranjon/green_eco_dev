@@ -2,12 +2,17 @@
   display: flex;
   width: 80%;
   margin: 0 auto;
-  padding-top: 15vh;
   justify-content: center;
   flex-direction: column;
+  padding-top: 8vh;
   @media screen and (min-width: 900px) {
+    padding-top: 15vh;
     justify-content: space-between;
     flex-direction: row;
+  }
+  @media screen and (max-width: 600px) {
+    padding-top: 0vh;
+    width: 100%;
   }
 }
 .hader_info {
