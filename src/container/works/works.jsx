@@ -19,13 +19,13 @@ const Works = () => {
         {imgAryy
           .map((item) => (
             <div className="work__box" key={item}>
-              <img src={images.oneCarousel} alt="" />
-              <div className="work_discription">
+              <img src={images.twoCarousel} alt="" />
+              <p className="work_discription">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A
                 consectetur ut modi! Nam saepe, doloremque veritatis deleniti
                 nihil est voluptate beatae odit rem et, consequuntur corporis
                 illo veniam asperiores! Cum!
-              </div>
+              </p>
             </div>
           ))
           .slice(0, width < 900 ? 3 : 6)}
