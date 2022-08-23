@@ -29,4 +29,5 @@
   background-color: var(--theme_text);
   color: #ffffff;
   cursor: pointer;
+  text-decoration: none;
 }

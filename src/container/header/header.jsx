@@ -25,7 +25,9 @@ const Header = () => {
             simply random text. It has roots in a piece of classical Latin
             literature from 45 BC, making it over 2000
           </p>
-          <button className="button">Read More</button>
+          <a href="#about">
+            <button className="button">Read More</button>
+          </a>
         </div>
       </div>
       <div className="header_carousel">
