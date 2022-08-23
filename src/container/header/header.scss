@@ -10,8 +10,9 @@
     justify-content: space-between;
     flex-direction: row;
   }
+
   @media screen and (max-width: 600px) {
-    padding-top: 0vh;
+    padding-top: 5vh;
     width: 100%;
   }
 }
