@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SocialMediaIcon from "../../components/socialMediaIcon";
 import { images } from "../../constant";
 import AppWrap from "../../wrapper/AppWrap";
 import "./contact.scss";
@@ -34,15 +35,15 @@ const Contact = () => {
         <h1>Contact</h1>
         <span></span>
       </div>
-
-      <div className="app__footer-cards">
-        <div className="app__footer-card ">
+      <SocialMediaIcon />
+      <div className="app__contact-cards">
+        <div className="app__contact-card ">
           <img src={images.email} alt="email" />
           <a href="mailto:satyaranjonofficial@gmail.com" className="p-text">
             satyaranjonofficial@gmail.com
           </a>
         </div>
-        <div className="app__footer-card">
+        <div className="app__contact-card">
           <img src={images.mobile} alt="phone" />
           <a href="tel:+8801746958641" className="p-text">
             +8801746958641
@@ -50,7 +51,7 @@ const Contact = () => {
         </div>
       </div>
       {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
+        <div className="app__contact-form app__flex">
           <div className="app__flex">
             <input
               className="p-text"
