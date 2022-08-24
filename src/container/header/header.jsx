@@ -1,16 +1,26 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import { images } from "../../constant";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import "./header.scss";
 import AppWrap from "../../wrapper/AppWrap";
+import { useEffect } from "react";
+import { useState } from "react";
+import { client, urlFor } from "../../client";
+
 const Header = () => {
-  const imgList = [
-    images.oneCarousel,
-    images.twoCarousel,
-    images.threeCarousel,
-    images.fourCarousel,
-  ];
+  const [about, setAbout] = useState([]);
+  const [image, setImage] = useState([]);
+  const query = '*[_type == "abouts"]';
+  const haderimag = '*[_type == "headerimage"]';
+
+  useEffect(() => {
+    client.fetch(query).then((data) => {
+      setAbout(data);
+    });
+    client.fetch(haderimag).then((data) => {
+      setImage(data);
+    });
+  }, []);
   return (
     <div className="app__header">
       <div className="hader_info">
@@ -18,26 +28,84 @@ const Header = () => {
           <span>Green Echo 🌏 </span> <br /> is an Environmental Organization
         </h3>
         <div className="hader_about">
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 Contrary to popular belief, Lorem Ipsum is not
-            simply random text. It has roots in a piece of classical Latin
-            literature from 45 BC, making it over 2000
-          </p>
-          <a href="#about">
-            <button className="button">Read More</button>
-          </a>
+          {about &&
+            about.map((about) => (
+              <div key={Math.random()}>
+                <p>{about.description.slice(0, 300)}</p>
+                <a href="#about">
+                  <button className="button">Read More</button>
+                </a>
+              </div>
+            ))}
         </div>
       </div>
       <div className="header_carousel">
         <Carousel showArrows={true}>
-          {imgList.map((img) => (
-            <div key={img}>
-              <img src={img} alt={img} />
-              <p className="legend">{img}</p>
-            </div>
-          ))}
+          {image &&
+            image
+              .map((img) => (
+                <img
+                  src={urlFor(img.image1)}
+                  key={img.image1}
+                  alt={img.image1}
+                />
+              ))
+              .slice(0, 1)}
+
+          {image &&
+            image
+              .map((img) => (
+                <img
+                  src={urlFor(img.image2)}
+                  key={img.image2}
+                  alt={img.image2}
+                />
+              ))
+              .slice(0, 1)}
+
+          {image &&
+            image
+              .map((img) => (
+                <img
+                  src={urlFor(img.image3)}
+                  key={img.image3}
+                  alt={img.image3}
+                />
+              ))
+              .slice(0, 1)}
+
+          {image &&
+            image
+              .map((img) => (
+                <img
+                  src={urlFor(img.image4)}
+                  key={img.image4}
+                  alt={img.image4}
+                />
+              ))
+              .slice(0, 1)}
+
+          {image &&
+            image
+              .map((img) => (
+                <img
+                  src={urlFor(img.image5)}
+                  key={img.image5}
+                  alt={img.image5}
+                />
+              ))
+              .slice(0, 1)}
+
+          {image &&
+            image
+              .map((img) => (
+                <img
+                  src={urlFor(img.image6)}
+                  key={img.image6}
+                  alt={img.image6}
+                />
+              ))
+              .slice(0, 1)}
         </Carousel>
       </div>
     </div>

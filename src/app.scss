@@ -50,20 +50,16 @@
 }
 
 .app__social {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row;
-  padding: 1rem;
-
   a {
+    float: left;
+    float: inline-start;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: var(--white-color);
     margin: 0.25rem 0;
     border: 1px solid var(--lightGray-color);
-    margin: auto 4vh;
+    margin: 1vh 4vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +93,14 @@
       }
     }
     @media screen and (max-width: 450px) {
-      margin: auto 1vh;
+      margin: 1vh 1vh;
     }
   }
+}
+
+.app_contact_f {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

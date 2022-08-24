@@ -55,8 +55,8 @@
 }
 
 .header_carousel {
-  width: 100%;
-  @media screen and (min-width: 900px) {
-    // width: 600px;
+  width: 50%;
+  @media screen and (max-width: 900px) {
+    width: 100%;
   }
 }

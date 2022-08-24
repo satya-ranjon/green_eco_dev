@@ -4,15 +4,10 @@ import Header from "./container/header/header";
 import "./app.scss";
 import Works from "./container/works/works";
 import NewActivate from "./container/newActivate/newActivate";
-import Contact from "./container/contact/contact";
+import Contact from "./container/";
 function App() {
   return (
     <div>
-      <Navbar />
-      <Header />
-      <About />
-      <NewActivate />
-      <Works />
       <Contact />
     </div>
   );

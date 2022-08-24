@@ -1,13 +1,20 @@
 import React from "react";
-import { images } from "../../constant";
 import AppWrap from "../../wrapper/AppWrap";
 import "./works.scss";
 import useWindowSize from "../../hooks/useWindows";
-
+import { useState } from "react";
+import { useEffect } from "react";
+import { client, urlFor } from "../../client";
 const Works = () => {
-  //--> after delete
-  const imgAryy = [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 3];
-  const { height, width } = useWindowSize();
+  const { width } = useWindowSize();
+  const [works, setWorks] = useState([]);
+  const work = '*[_type == "works"]';
+
+  useEffect(() => {
+    client.fetch(work).then((data) => {
+      setWorks(data);
+    });
+  }, []);
 
   return (
     <div className="app_works">
@@ -16,16 +23,11 @@ const Works = () => {
         <span></span>
       </div>
       <div className="works_section">
-        {imgAryy
-          .map((item) => (
-            <div className="work__box" key={item}>
-              <img src={images.twoCarousel} alt="" />
-              <p className="work_discription">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                consectetur ut modi! Nam saepe, doloremque veritatis deleniti
-                nihil est voluptate beatae odit rem et, consequuntur corporis
-                illo veniam asperiores! Cum!
-              </p>
+        {works
+          .map((works, index) => (
+            <div className="work__box" key={index}>
+              <img src={urlFor(works.imgUrl)} alt={works.imgUrl} />
+              <p className="work_discription">{works.title.slice(0, 100)}</p>
             </div>
           ))
           .slice(0, width < 900 ? 3 : 6)}
