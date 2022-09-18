@@ -131,7 +131,9 @@
   cursor: pointer;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 0;
+@media screen and (max-width: 400px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 }

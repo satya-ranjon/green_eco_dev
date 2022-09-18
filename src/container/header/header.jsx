@@ -19,6 +19,7 @@ const Header = () => {
     });
     client.fetch(haderimag).then((data) => {
       setImage(data);
+      console.log(data);
     });
   }, []);
   return (
@@ -42,70 +43,14 @@ const Header = () => {
       <div className="header_carousel">
         <Carousel showArrows={true}>
           {image &&
-            image
-              .map((img) => (
-                <img
-                  src={urlFor(img.image1)}
-                  key={img.image1}
-                  alt={img.image1}
-                />
-              ))
-              .slice(0, 1)}
-
-          {image &&
-            image
-              .map((img) => (
-                <img
-                  src={urlFor(img.image2)}
-                  key={img.image2}
-                  alt={img.image2}
-                />
-              ))
-              .slice(0, 1)}
-
-          {image &&
-            image
-              .map((img) => (
-                <img
-                  src={urlFor(img.image3)}
-                  key={img.image3}
-                  alt={img.image3}
-                />
-              ))
-              .slice(0, 1)}
-
-          {image &&
-            image
-              .map((img) => (
-                <img
-                  src={urlFor(img.image4)}
-                  key={img.image4}
-                  alt={img.image4}
-                />
-              ))
-              .slice(0, 1)}
-
-          {image &&
-            image
-              .map((img) => (
-                <img
-                  src={urlFor(img.image5)}
-                  key={img.image5}
-                  alt={img.image5}
-                />
-              ))
-              .slice(0, 1)}
-
-          {image &&
-            image
-              .map((img) => (
-                <img
-                  src={urlFor(img.image6)}
-                  key={img.image6}
-                  alt={img.image6}
-                />
-              ))
-              .slice(0, 1)}
+            image.map((img) => (
+              <img
+                className="image_carousel"
+                key={img._id}
+                src={urlFor(img.imgUrl)}
+                alt={img.imgUrl}
+              />
+            ))}
         </Carousel>
       </div>
     </div>
