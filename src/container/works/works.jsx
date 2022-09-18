@@ -10,6 +10,7 @@ import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 const Works = () => {
   // const { width } = useWindowSize();
   const [works, setWorks] = useState([]);
+  const [work11, setWorks1] = useState([]);
   const [next, setNext] = useState(2);
   const [prv, setPrv] = useState(0);
 
@@ -33,7 +34,9 @@ const Works = () => {
   }, [next]);
 
   useEffect(() => {
-    client.fetch(work1).then((data) => {});
+    client.fetch(work1).then((data) => {
+      setWorks1(data);
+    });
   }, []);
 
   const [sinWork, setSingleWork] = useState();
@@ -47,8 +50,6 @@ const Works = () => {
   function singleWorkOf(id) {
     setSingleWork();
   }
-  console.log(sinWork);
-  // console.log(works);
 
   return (
     <div className="app_works">
@@ -69,10 +70,10 @@ const Works = () => {
         ))}
       </div>
       <div className="pagination">
-        {prv !== 0 && (
+        {work11 && prv !== 0 && (
           <AiOutlineArrowLeft className="pagination__btn" onClick={PrvWork} />
         )}
-        {next <= work1.length ? (
+        {work11 && next <= work11.length ? (
           <AiOutlineArrowRight className="pagination__btn" onClick={NextWork} />
         ) : null}
       </div>

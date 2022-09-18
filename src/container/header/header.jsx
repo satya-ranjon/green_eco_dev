@@ -19,7 +19,6 @@ const Header = () => {
     });
     client.fetch(haderimag).then((data) => {
       setImage(data);
-      console.log(data);
     });
   }, []);
   return (
