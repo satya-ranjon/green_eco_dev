@@ -10,8 +10,8 @@ const NavBar = () => {
     "New Activate",
     "WORKS",
     "CONTACT",
-    "BLOG",
-    "JOIN US",
+    // "BLOG",
+    // "JOIN US",
   ];
   const [toggle, setToggle] = useState(false);
   return (
