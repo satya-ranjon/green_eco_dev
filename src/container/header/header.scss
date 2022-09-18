@@ -63,7 +63,7 @@
 .slide {
   .image_carousel {
     height: 400px !important;
-      @media screen and (min-width: 400px) {
+      @media screen and (max-width: 400px) {
             height: 250px !important;
     }
   }
