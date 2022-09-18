@@ -127,9 +127,7 @@ const Contact = () => {
                   </div>
                 ) : (
                   <div>
-                    <h3 className="head-text">
-                      Thank you for getting in touch!
-                    </h3>
+                    <h3 className="head-text">Thank you for connect</h3>
                   </div>
                 )}
               </>

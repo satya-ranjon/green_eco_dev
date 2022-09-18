@@ -54,4 +54,84 @@
       }
     }
   }
+  .pagination {
+    width: 100%;
+    text-align: center;
+    .pagination__btn {
+      // padding: 1vh;
+
+      padding: 1vh;
+      text-align: center;
+      font-size: 5vh;
+      cursor: pointer;
+      border: 1px solid rgb(63, 62, 62);
+      color: rgba(15, 15, 15, 0.548);
+      margin: 1vh;
+      transition: all 0.4s;
+      &:hover {
+        background-color: rgba(106, 226, 112, 0.342);
+        color: #000;
+      }
+      // border: none;
+    }
+  }
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  @media screen and (max-width: 400px) {
+    padding-top: 100px;
+  }
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  .modelBox {
+    height: 700px;
+    background-color: #fbfff8;
+    overflow-y: scroll;
+    @media screen and (max-width: 400px) {
+      height: 480px;
+    }
+    .modelImage {
+      width: 100%;
+    }
+  }
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+}
+
+/* The Close Button */
+.close {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  text-align: end;
+  color: #4e4e4e;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
 }
